@@ -1,59 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentcopia</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
+    />
 
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital@1&display=swap" rel="stylesheet">
-</head>
-<body>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="overlay"></div>
-        <div class="fondo">
-            <video class="video" autoplay loop muted>
-                <source src="./assets/playa1.mp4" type="video/mp4"/>
-            </video>
-        </div>    
-        <h1 class="titulo">Book it !</h1>    
-        <div class="container-filters">
+      <!-- <div class="overlay"></div> -->
+      <div class="fondo">
+        <video class="video" autoplay loop muted>
+          <source src="./assets/playa1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <h1 class="titulo">Book it !</h1>
+      <div class="container-filters">
         <div class="filter_grid">
-            <select class="elementos-filters icon-element-country" name="filter-countries " id="filter-countries">
-                <option value="All">All countries</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Brasil">Brasil</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Uruguay">Uruguay</option>
-            </select>
-            <input min="NaN-NaN-NaN" max type="date" name="fecha-inicio"  id="fecha-inicio" class="elementos-filters icon-element-entrada">
-            <input min="NaN-NaN-NaN" max type="date" type="date" name="fecha-final" id="fecha-final" class="elementos-filters icon-element-salida">
-            <select name="prices" id="prices" class="elementos-filters icon-element-price">
-                <option value="all" id="precios">All prices</option>
-                <option value="price1">$</option>
-                <option value="price2">$$</option>
-                <option value="price3">$$$</option>
-                <option value="price4">$$$$</option>
-            </select>
-            <select class="elementos-filters icon-element-sizes" name="sizes" id="sizes">
-                <option value="All">All sizes</option>
-                <option value="Large">Large</option>
-                <option value="Medium">Medium</option>
-                <option value="Small">Small</option>
-            </select>
-            <input type="reset" name="reset" id="clear" value="Clear" >
+          <select
+            class="elementos-filters icon-element-country"
+            name="filter-countries "
+            id="filter-countries"
+          >
+            <option value="All">All countries</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Uruguay">Uruguay</option>
+          </select>
+          <input
+            min="NaN-NaN-NaN"
+            max
+            type="date"
+            name="fecha-inicio"
+            id="fecha-inicio"
+            class="elementos-filters icon-element-entrada"
+          />
+          <input
+            min="NaN-NaN-NaN"
+            max
+            type="date"
+            type="date"
+            name="fecha-final"
+            id="fecha-final"
+            class="elementos-filters icon-element-salida"
+          />
+          <select
+            name="prices"
+            id="prices"
+            class="elementos-filters icon-element-price"
+          >
+            <option value="all" id="precios">All prices</option>
+            <option value="price1">$</option>
+            <option value="price2">$$</option>
+            <option value="price3">$$$</option>
+            <option value="price4">$$$$</option>
+          </select>
+          <select
+            class="elementos-filters icon-element-sizes"
+            name="sizes"
+            id="sizes"
+          >
+            <option value="All">All sizes</option>
+            <option value="Large">Large</option>
+            <option value="Medium">Medium</option>
+            <option value="Small">Small</option>
+          </select>
+          <input type="reset" name="reset" id="clear" value="Clear" />
         </div>
-    </div>
-    <div class="text-final-container">
-    <p class="titulo-final">We have found for you...</p>
-    <p class="final-content">All sizes hotels of all category prices, in all countries.</p>
-     </div>
-   
-</body>
+      </div>
+      <div class="text-final-container">
+        <p class="titulo-final">We have found for you...</p>
+        <p class="final-content">
+          All sizes hotels of all category prices, in all countries.
+        </p>
+      </div>
+    </header>
+    <main>
+     
+        <div class="hotel-container">
+            <!-- Las tarjetas de hotel se agregarán aquí dinámicamente -->
+        </div>
+            
+
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
