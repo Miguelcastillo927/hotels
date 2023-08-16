@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentcopia</title>
+    <title>Documentorigin</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,7 +39,7 @@
             <option value="All">All countries</option>
             <option value="Argentina">Argentina</option>
             <option value="Brasil">Brasil</option>
-            <option value="Colombia">Colombia</option>
+            <option value="Chile">Chile</option>
             <option value="Uruguay">Uruguay</option>
           </select>
           <input
@@ -64,11 +64,11 @@
             id="prices"
             class="elementos-filters icon-element-price"
           >
-            <option value="all" id="precios">All prices</option>
-            <option value="price1">$</option>
-            <option value="price2">$$</option>
-            <option value="price3">$$$</option>
-            <option value="price4">$$$$</option>
+            <option value="All">All prices</option>
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
           </select>
           <select
             class="elementos-filters icon-element-sizes"
@@ -91,8 +91,12 @@
       </div>
     </header>
     <main>
+      <div id="no-hotels-message" class="no-hotels-message" style=" display: none;">
+        <div class="text-notfound"><h1>No hay hoteles para mostrar</h1> </div>
+    </div>
+    
      
-        <div class="hotel-container">
+        <div class="hotel-container">          
             <!-- Las tarjetas de hotel se agregarán aquí dinámicamente -->
         </div>
             

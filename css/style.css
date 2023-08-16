@@ -12,7 +12,6 @@ header {
   z-index: 3;
   width: 100%;
   height: auto;
-  border-radius: 30px;
 }
 
 .overlay {
@@ -31,7 +30,8 @@ header {
   left: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
 }
 
 .video {
@@ -175,7 +175,7 @@ p {
 .hotel-container {
   max-width: 1024px;
   position: relative;
-  margin-top: 350px;
+  margin-top: 320px;
   padding: 20px;
   z-index: 1; /* Z-index del contenedor principal */
   display: grid;
@@ -185,15 +185,25 @@ p {
   justify-content: center;
 }
 
+.no-hotels-message {
+  background-color: blue;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  margin-top: 20px;
+  z-index: 12;
+}
+
 .card {
   border: 1px solid rgba(10, 10, 10, 0.7176470588);
-  border-radius: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
   margin-top: 0.775rem;
   padding: 10px;
   width: 470px;
   height: 280px;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,16 +214,6 @@ p {
   align-items: flex-start;
   overflow: hidden;
 }
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-  z-index: -1; /* Cambiar a un valor mayor que el z-index del contenedor principal */
-}
 
 .hotel-name {
   font-family: "Roboto", "Sanaerif";
@@ -222,6 +222,7 @@ p {
   font-weight: bold;
   margin: 5px;
   padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .hotelcard-info {
@@ -240,15 +241,17 @@ p {
 .bandera img {
   margin-right: 5px;
   height: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
 }
 
 .hotelcard-numbers {
   display: flex;
 }
 
-.pais {
+.paisnombre {
   margin: 0 10px;
   font-family: "Roboto", "Sanaerif";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .precio {
@@ -258,28 +261,36 @@ p {
 .rooms {
   margin: 0 10px;
   font-family: "Roboto", "Sanaerif";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .book-button {
   position: absolute;
   bottom: 20px;
-  right: 10px;
-  background-color: #007bff;
+  right: 20px;
+  background-color: rgba(0, 123, 255, 0.5137254902);
   color: white;
   border: none;
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   z-index: 2;
+  border: 1px solid rgba(10, 10, 10, 0.7176470588);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
 }
 
 @media screen and (min-width: 1200px) {
   .hotel-container {
+    justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+  }
+  .card {
+    width: 440px;
+    height: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

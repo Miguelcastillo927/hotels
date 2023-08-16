@@ -1,5 +1,5 @@
 $font-body: "Pacifico", "cursive";
-$font-main: "Roboto" , "Sanaerif";
+$font-main: "Roboto", "Sanaerif";
 
 body {
   margin: 0;
@@ -8,7 +8,6 @@ body {
 }
 
 header {
-
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -16,7 +15,7 @@ header {
   z-index: 3;
   width: 100%;
   height: auto;
-  border-radius: 30px;
+  // border-radius: 0 0 30px 30px;
   // opacity: 0.9;
 }
 .overlay {
@@ -34,14 +33,15 @@ header {
   left: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 30px;
-
- }
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+}
 
 .video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  // border-radius: 0 0 30px 30px;
 }
 
 .titulo {
@@ -76,7 +76,6 @@ header {
   font-size: 15px;
   border-bottom-left-radius: 2px;
   border-radius: 10px;
- 
   border: 1px solid #ccc;
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.7);
 }
@@ -170,34 +169,44 @@ p {
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-.main{
+.main {
   max-width: 100%;
-  
 }
 
 .hotel-container {
   // width: auto;
   max-width: 1024px;
   position: relative;
-  margin-top: 350px;
+  margin-top: 320px;
   padding: 20px;
   z-index: 1; /* Z-index del contenedor principal */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
   justify-content: center;
-  
 }
+
+.no-hotels-message {
+  background-color: blue;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  margin-top: 20px;
+  z-index: 12;
+}
+
 
 .card {
   border: 1px solid #0a0a0ab7;
-  border-radius: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
   margin-top: 0.775rem;
   padding: 10px;
   width: 470px;
   height: 280px;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -208,53 +217,18 @@ p {
   align-items: flex-start;
   overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-    z-index: -1; /* Cambiar a un valor mayor que el z-index del contenedor principal */
-  }
+  
 }
 
-
-
-// .card {
-//   border: 1px solid #0a0a0ab7;
-//   border-radius: 1rem;
-//   margin-top: 0.775rem;
-//   padding: 10px;
-  
-//   width: 450px; 
-//   height: 270px; 
-//   position: relative; 
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-color: #fff;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   align-items: flex-start;
-//   overflow: hidden;
- 
-// }
-
-
-
-
-.hotel-name{
+.hotel-name {
   font-family: $font-main;
   font-size: 28px;
   color: #fff;
   font-weight: bold;
   margin: 5px;
   padding: 0;
-} 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
 
 .hotelcard-info {
   display: flex;
@@ -271,71 +245,72 @@ p {
 
 .bandera img {
   margin-right: 5px;
-  height: 20px; 
+  height: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
 }
 
-.hotelcard-numbers{
+.hotelcard-numbers {
   display: flex;
-  
 }
-.pais{
+.paisnombre {
   margin: 0 10px;
   font-family: $font-main;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-.precio{
+.precio {
   margin: 0 10px;
 }
-.rooms{
+.rooms {
   margin: 0 10px;
   font-family: $font-main;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .book-button {
   position: absolute;
   bottom: 20px;
-  right: 10px;
-  background-color: #007bff;
+  right: 20px;
+  background-color: #007bff83;
   color: white;
   border: none;
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   z-index: 2;
+  border: 1px solid #0a0a0ab7;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
 }
 
-
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   // .hotel-container {
   //   display: grid;
   //   grid-template-columns: repeat(2, 1fr);
   //   column-gap: 10 px;
   //   justify-content: center;
   //   overflow: hidden;
-  
+
   //  }
 
   //  .card{
   //   width: 48%;
-  //  } 
-  
-  
+  //  }
 }
 
 @media screen and (min-width: 1200px) {
-
-  // .main{
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  // }
+   
 
   .hotel-container {
+    justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     // column-gap: 10 px;
-  gap: 10px;
-   }
+    gap: 10px;
+  }
+  .card{
+    width: 440px;
+    height:250px ;
+  }
 }
