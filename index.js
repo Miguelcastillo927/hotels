@@ -10,14 +10,17 @@ const filterSizes = document.getElementById('sizes');
 const clearButton = document.getElementById('clear');
 const hotelContainer = document.querySelector(".hotel-container") 
 
+const messageContainer = document.getElementById("no-hotels-message"); // Cambia el selector para obtener el elemento correcto
+
+
 const hotelsdata = async () => {
     const response = await consultarHoteles();
     const data = await response.json();
     const filteredHotels = applyFilters(data);
     console.log(applyFilters(data))
+    // const hotelContainer = d
 
-    const messageContainer = document.querySelector(".no-hotels-message"); // Cambia el selector para obtener el elemento correcto
-    const hotelContainer = document.querySelector(".hotel-container");
+   
 
     if (filteredHotels.length === 0) {
         messageContainer.style.display = "block";
