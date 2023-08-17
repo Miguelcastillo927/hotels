@@ -186,17 +186,30 @@ p {
   justify-content: center;
 }
 
-.no-hotels-message {
-  background-color: blue;
+#no-hotels-message {
+  margin: 400px 0;
+  background-color: rgba(42, 42, 43, 0.192);
   width: 100%;
   text-align: center;
   font-size: 20px;
-  color: red;
   margin-top: 20px;
   z-index: 12;
 }
-
-
+// .message {
+//   position: absolute;
+//    margin: 400px 0;
+//   width: 500px;
+//   height: auto;
+// }
+.not-found {
+  padding: 400px 0;
+  margin: 40px 0 20px;
+  height: 30%;
+  font-size: 80px;
+  color: white;
+  padding-left: 40px;
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+}
 .card {
   border: 1px solid #0a0a0ab7;
   border-radius: 10px;
@@ -216,8 +229,6 @@ p {
   justify-content: flex-end;
   align-items: flex-start;
   overflow: hidden;
-
-  
 }
 
 .hotel-name {
@@ -300,8 +311,6 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
-   
-
   .hotel-container {
     justify-content: space-between;
     display: grid;
@@ -309,8 +318,8 @@ p {
     // column-gap: 10 px;
     gap: 10px;
   }
-  .card{
+  .card {
     width: 440px;
-    height:250px ;
+    height: 250px;
   }
 }
